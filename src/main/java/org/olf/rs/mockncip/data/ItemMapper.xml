@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.olf.rs.mockncip.data.ItemMapper">
+
+<resultMap id="itemMap" type="Item">
+        <id column="id" property="id"/>  
+        <result column="author" property="author"/>  
+        <result column="callNumber" property="callNumber"/>  
+        <result column="itemBarcode" property="itemBarcode"/>
+		<result column="status" property="status"/>
+		<result column="title" property="title"/>
+ </resultMap>
+ 
+ <select id="getItemByBarcode" parameterType="String" resultMap="itemMap">
+	select * from item where itemBarcode = #{param1}
+</select>
+ 
+
+
+<insert id="insertNewItem" parameterType="Item">
+	insert into item values(#{id}, #{title}, #{itemBarcode}, #{author},#{status},#{callNumber});
+</insert>
+
+<update id="setItemToLoanedByBarcode" parameterType="String">
+	update item set status ="LOANED" where itemBarcode = #{param1}
+</update>
+
+<update id="setItemToAvailableByBarcode" parameterType="String">
+	update item set status ="AVAILABLE" where itemBarcode = #{param1}
+</update>
+
+ <select id="getAllItems" resultMap="itemMap">
+	select * from item where itemBarcode 
+</select>
+
+ <select id="getAvailableItems" resultMap="itemMap">
+	select * from item where status = "AVAILABLE"
+</select>
+
+
+ <select id="getLoanItems" resultMap="itemMap">
+	select * from item where status = "LOANED"
+</select>
+
+
+</mapper>
+

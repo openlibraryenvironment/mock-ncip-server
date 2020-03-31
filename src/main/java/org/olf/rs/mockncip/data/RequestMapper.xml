@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.olf.rs.mockncip.data.RequestMapper">
+
+
+<resultMap id="requestMap" type="Request">  
+        <id column="id" property="id"/>  
+        <result column="itemBarcode" property="itemBarcode"/>  
+        <result column="patronBarcode" property="patronBarcode"/>  
+        <result column="requestDate" property="requestDate"/>
+        <result column="pickupLocation" property="pickupLocation"/>
+        <result column="requestStatus" property="requestStatus" />
+ </resultMap>
+ 
+ <select id="getRequestById" parameterType="String" resultMap="requestMap">
+	select * from request where id = #{param1}
+</select>
+
+ <select id="getOpenRequestByItemAndOtherPatron" parameterType="String" resultMap="requestMap">
+	select * from request where itemBarcode = #{param1} and patronBarcode != #{param2} and requestStatus = "OPEN"
+</select>
+
+ <select id="getOpenRequestsForPatron" parameterType="String" resultMap="requestMap">
+	select * from request where patronBarcode = #{param1} and requestStatus = "OPEN"
+</select>
+
+ <select id="getOpenRequestForItem" parameterType="String" resultMap="requestMap">
+	select * from request where itemBarcode = #{param1} and and requestStatus = "OPEN" limit 1;
+</select>
+ 
+<insert id="insertNewRequest" parameterType="Request">
+	insert into request values(#{id}, #{patronBarcode}, #{requestDate}, #{itemBarcode},#{pickupLocation},"OPEN");
+</insert>
+
+<update id="setRequestToClosed" parameterType="String">
+	update request set requestStatus = "CLOSED" where itemBarcode = #{param1} and patronBarcode = #{param2} and requestStatus = "OPEN"
+</update>
+
+<select id="getRequestsByPatronBarcode" parameterType="String">
+	select * from request where patronBarocde = #{param1}
+</select>
+
+<select id="getRequestsByItemBarcode" parameterType="String">
+	select * from request where itemBarcode = #{param1}
+</select>
+
+<select id="getAllRequests" resultMap="requestMap">
+	select * from request
+</select>
+
+<select id="getAllOpenRequests" resultMap="requestMap">
+	select * from request where requestStatus = "OPEN"
+</select>
+
+<select id="getAllClosedRequests" resultMap="requestMap">
+	select * from request where requestStatus = "CLOSED"
+</select>
+
+
+</mapper>

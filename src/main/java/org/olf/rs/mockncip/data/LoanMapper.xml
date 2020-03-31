@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.olf.rs.mockncip.data.LoanMapper">
+
+
+<resultMap id="loanMap" type="Loan">
+        <id column="id" property="id"/>
+        <result column="itemBarcode" property="itemBarcode"/>
+        <result column="patronBarcode" property="patronBarcode"/>
+        <result column="dueDate" property="dueDate"/>
+        <result column="loanStatus" property="loanStatus"/>
+</resultMap>
+ 
+ <select id="getLoanById" parameterType="String" resultMap="loanMap">
+	select * from loan where id = #{param1}
+</select>
+
+ <select id="getOpenLoanByItemBarcode" parameterType="String" resultMap="loanMap">
+	select * from loan where itemBarcode = #{param1} and loanStatus = "OPEN"
+</select>
+
+<insert id="insertNewLoan" parameterType="Loan">
+	insert into loan values(#{id}, #{dueDate}, #{itemBarcode}, #{patronBarcode},"OPEN");
+</insert>
+
+<select id="getOpenLoansByPatron" parameterType="String" resultMap="loanMap">
+	select * from loan where patronBarcode = #{param1} and loanStatus == "OPEN"
+</select>
+
+<update id="closeLoan" parameterType="Loan">
+    update loan set loanStatus = "CLOSED" where id = #{id}
+</update>
+
+<select id="getAllLoans" resultMap="loanMap">
+	select * from loan
+</select>
+
+<select id="getOpenLoans" resultMap="loanMap">
+	select * from loan where loanStatus = "OPEN"
+</select>
+
+ 
+
+
+
+</mapper>
