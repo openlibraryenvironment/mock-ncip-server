@@ -40,13 +40,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 	    		LoanMapper loanMapper = mysqlsession.getMapper(LoanMapper.class);
 	    		RequestMapper requestMapper = mysqlsession.getMapper(RequestMapper.class);
 	    		Patron patron = patronMapper.getPatronByBarcode(patronBarcode);
-	    		if (patron == null) return Response.serverError().entity(errorAsJsonString("patron barcode not found",new Exception())).build();
+				if (patron == null) {
+					logger.info("patron not found");
+					throw new Exception("patron not found: "  + patronBarcode);
+				}
 	    		patron.setLoans(loanMapper.getOpenLoansByPatron(patronBarcode));
 	    	    patron.setRequests(requestMapper.getOpenRequestsForPatron(patronBarcode));
 	    		return Response.ok().entity(constructReturnString(patron)).build();
     		} catch (Exception e) {
     			logger.fatal(e.getLocalizedMessage());
     			String errorMessage = errorAsJsonString("unable to find patron with barcode: " + patronBarcode, e);
+    			logger.info(errorMessage);
     			return Response.serverError().entity(errorMessage).build();
     		}
     		

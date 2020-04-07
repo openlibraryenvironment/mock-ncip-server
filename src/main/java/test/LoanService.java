@@ -41,7 +41,7 @@ public class LoanService  extends VerificationService {
 			return Response.ok().entity(json).build();
 		} catch (Exception e) {
 			logger.fatal(e.getLocalizedMessage());
-			String errorMessage = errorAsJsonString("uunable to get all loans: ", e);
+			String errorMessage = errorAsJsonString("unable to get all loans: ", e);
 			return Response.serverError().entity(errorMessage).build();
 		}
 	}

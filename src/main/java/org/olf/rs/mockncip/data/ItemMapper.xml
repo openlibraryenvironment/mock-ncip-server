@@ -30,7 +30,7 @@
 </update>
 
  <select id="getAllItems" resultMap="itemMap">
-	select * from item where itemBarcode 
+	select * from item 
 </select>
 
  <select id="getAvailableItems" resultMap="itemMap">

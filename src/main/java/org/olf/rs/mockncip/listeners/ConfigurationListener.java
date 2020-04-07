@@ -32,9 +32,6 @@ public class ConfigurationListener implements ServletContextListener {
 		System.out.println("init the db here");
 		try {
 			Class.forName("org.sqlite.JDBC");
-			//Connection connection = DriverManager.getConnection("jdbc:sqlite::memory:");
-			//connection.setAutoCommit(false);
-			
 			SqlSession mysqlsession = null; 
 			String mysqlresource = Constants.MY_BATIS_CONFIG_FILE;
 			InputStream mysqlinputStream = Resources.getResourceAsStream(mysqlresource);

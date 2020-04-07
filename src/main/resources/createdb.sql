@@ -40,11 +40,11 @@ CREATE TABLE patron (
 	phone TEXT(500)
 );
 
-INSERT INTO PATRON values("2","jane","Doe","5551000","def123","BLOCKED","STAFF","LINDERMAN","def123@lehigh.edu","201-555-1212");
-INSERT INTO PATRON values("2","john","Smith","5551001","jos555","ACTIVE","GRAD","FAIRCHILD","jos555@lehigh.edu","215-555-1212");
-INSERT INTO PATRON values("2","Cindy","Jones","5551002","coj555","ACTIVE","UGRAD","LINDERMAN","coj555@lehigh.edu","610-555-1212");
+INSERT INTO PATRON values("2","Jane","Doe","5551000","def123","BLOCKED","STAFF","LINDERMAN","def123@lehigh.edu","201-555-1212");
+INSERT INTO PATRON values("3","John","Smith","5551001","jos555","ACTIVE","GRAD","FAIRCHILD","jos555@lehigh.edu","215-555-1212");
+INSERT INTO PATRON values("4","Cindy","Jones","5551002","coj555","ACTIVE","UGRAD","LINDERMAN","coj555@lehigh.edu","610-555-1212");
 INSERT INTO ITEM values("b2a10690-6951-11ea-bc55-0242ac130003","One Fish Two Fish","39151000209805","Richard Hesse","AVAILABLE","500.1");
-INSERT INTO ITEM values("f08421d3-72b4-47c4-a55d-670f58e08100","Grapes of Wrath","39151000095337","James Ortega","LOANED","500.2");
+INSERT INTO ITEM values("f08421d3-72b4-47c4-a55d-670f58e08100","Grapes of Wrath","39151000095337","John Steinbeck","LOANED","500.2");
 INSERT INTO ITEM values("9d3b79f9-9c18-4c48-b50f-37e090006f11","Fine Balance","39151004322067","A. Smith","AVAILABLE","500.3");
 INSERT INTO LOAN values("9d3b79f9-9c18-4c48-b50f-37e090006f11","2020-06-24T04:00:00Z","39151000095337","5551002","OPEN");
 
