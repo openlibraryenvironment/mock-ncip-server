@@ -6,7 +6,19 @@ Receives and responds to NCIP requests
 gradle build
 <br>
 gradle appRun
-
+### build Docker image
+Build the application
+```
+./gradlew build
+```
+Build the container:
+```
+docker build -f docker/Dockerfile -t mock-ncip-server .
+```
+Run the container (example)
+```
+docker run -d -p 8080:8080 mock-ncip-server
+```
 
 ## Endpoints
 

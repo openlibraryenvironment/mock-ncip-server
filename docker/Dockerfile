@@ -1,14 +1,5 @@
-FROM gradle:jdk8
+FROM jetty:9.4-jre8
 
-# install git
-RUN apt-get update
-RUN apt-get install -y git
+ADD build/libs/mock-ncip-server*.war /var/lib/jetty/webapps/root.war
 
-RUN git clone https://github.com/openlibraryenvironment/mock-ncip-server.git
-
-WORKDIR mock-ncip-server
-RUN gradle build
 EXPOSE 8080
-
-
-CMD ["gradle", "--stacktrace", "appRun"]
