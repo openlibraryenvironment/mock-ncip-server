@@ -1,0 +1,33 @@
+<NCIPMessage version="http://www.niso.org/ncip/v1_0/imp1/dtd/ncip_v1_0.dtd">
+    <CheckOutItemResponse>
+        <ResponseHeader>
+            <FromAgencyId>
+                <UniqueAgencyId>
+                    <Scheme>http://www.relais-intl.com/ncip/schemes/agency.scm</Scheme>
+                    <Value>TNS</Value>
+                </UniqueAgencyId>
+            </FromAgencyId>
+            <ToAgencyId>
+                <UniqueAgencyId>
+                    <Scheme>http://www.relais-intl.com/ncip/schemes/agency.scm</Scheme>
+                    <Value>RSH</Value>
+                </UniqueAgencyId>
+            </ToAgencyId>
+        </ResponseHeader>
+        <Problem>
+            <ProcessingError>
+                <ProcessingErrorType>
+                    <Scheme>http://www.niso.org/ncip/v1_0/schemes/processingerrortype/checkoutitemprocessingerror.scm</Scheme>
+                    <Value>Unknown Item</Value>
+                </ProcessingErrorType>
+                <ProcessingErrorElement>
+                    <ElementName>UniqueItemId</ElementName>
+                    <ProcessingErrorElement>
+                        <ElementName>ItemIdentifierValue</ElementName>
+                        <ProcessingErrorValue>100556443-10</ProcessingErrorValue>
+                    </ProcessingErrorElement>
+                </ProcessingErrorElement>
+            </ProcessingError>
+        </Problem>
+    </CheckOutItemResponse>
+</NCIPMessage>

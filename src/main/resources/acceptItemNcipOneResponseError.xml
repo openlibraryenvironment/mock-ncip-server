@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE NCIPMessage PUBLIC "-//NISO//NCIP DTD Version 1//EN" "http://www.niso.org/ncip/v1_0/imp1/dtd/ncip_v1_0.dtd">
+<NCIPMessage version="http://www.niso.org/ncip/v1_0/imp1/dtd/ncip_v1_0.dtd">
+	<AcceptItemResponse>
+		<ResponseHeader>
+			<FromAgencyId>
+				<UniqueAgencyId>
+					<Scheme>URSA Agency IDs</Scheme>
+					<Value>TNS</Value>
+				</UniqueAgencyId>
+			</FromAgencyId>
+			<ToAgencyId>
+				<UniqueAgencyId>
+					<Scheme>URSA Agency IDs</Scheme>
+					<Value>RSH</Value>
+				</UniqueAgencyId>
+			</ToAgencyId>
+		</ResponseHeader>
+		<Problem>
+			<ProcessingError>
+				<ProcessingErrorType>
+					<Scheme>http://www.niso.org/ncip/v1_0/schemes/processingerrortype/requestitemprocessingerror.scm
+					</Scheme>
+					<Value>User Unknown</Value>
+				</ProcessingErrorType>
+				<ProcessingErrorElement>
+					<ElementName>NCIPMessage</ElementName>
+					<ProcessingErrorElement>
+						<ElementName>AcceptItem</ElementName>
+						<ProcessingErrorElement>
+							<ElementName>InitiationHeader</ElementName>
+							<ProcessingErrorElement>
+								<ElementName>FromAgencyId</ElementName>
+								<ProcessingErrorElement>
+									<ElementName>UniqueAgencyId</ElementName>
+									<ProcessingErrorElement>
+										<ElementName>Value</ElementName>
+										<ProcessingErrorValue>RSH</ProcessingErrorValue>
+									</ProcessingErrorElement>
+								</ProcessingErrorElement>
+							</ProcessingErrorElement>
+						</ProcessingErrorElement>
+					</ProcessingErrorElement>
+				</ProcessingErrorElement>
+			</ProcessingError>
+		</Problem>
+	</AcceptItemResponse>
+</NCIPMessage>
