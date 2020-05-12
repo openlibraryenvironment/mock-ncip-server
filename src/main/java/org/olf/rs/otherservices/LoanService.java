@@ -1,4 +1,4 @@
-package test;
+package org.olf.rs.otherservices;
 
 import java.io.IOException;
 import java.sql.Connection;

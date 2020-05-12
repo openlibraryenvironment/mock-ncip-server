@@ -1,4 +1,4 @@
-package test;
+package org.olf.rs.otherservices;
 
 import java.sql.Connection;
 import java.util.List;
