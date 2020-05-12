@@ -244,6 +244,7 @@ public class MockRemoteServiceManager implements RemoteServiceManager {
 		mysqlsession = mysqlsqlSessionFactory.openSession(dbConnection);
 		PatronMapper patronMapper = mysqlsession.getMapper(PatronMapper.class);
 		Patron patron = patronMapper.getPatronByBarcode(userid.getUserIdentifierValue());
+		if (patron == null) return null;
 		ObjectMapper objectMapper = new ObjectMapper();
 		String patronAsString = objectMapper.writeValueAsString(patron);
 		return new JSONObject(patronAsString);

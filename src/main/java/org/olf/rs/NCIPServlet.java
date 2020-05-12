@@ -487,13 +487,15 @@ public class NCIPServlet extends HttpServlet {
 
         byte[] problemMsgBytes = problemMsg.getBytes();
 
-        response.setContentLength(problemMsgBytes.length);
+        //response.setContentLength(problemMsgBytes.length);
 
         try {
 
-            ServletOutputStream outputStream = response.getOutputStream();
-            outputStream.write(problemMsgBytes);
-            outputStream.flush();
+        	response.setContentType("text/xml; charset=UTF-8");      
+        	response.getWriter().write(problemMsg);
+            //ServletOutputStream outputStream = response.getOutputStream();
+            //outputStream.write(problemMsgBytes);
+            //outputStream.flush();
 
         } catch (IOException e) {
 
