@@ -53,7 +53,7 @@
                   <Scheme>NCIP Unstructured Address Type Scheme</Scheme>
                   <Value>Newline-Delimited Text</Value>
                 </UnstructuredAddressType>
-                <UnstructuredAddressData>Doe, Jane</UnstructuredAddressData>
+                <UnstructuredAddressData>Doe, Jane 123 Main Street, Apt. 20 Allentown PA</UnstructuredAddressData>
               </UnstructuredAddress>
               <PhysicalAddressType>
                 <Scheme>NCIP Physical Address Type Scheme</Scheme>
