@@ -1,0 +1,72 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+  <!DOCTYPE NCIPMessage PUBLIC "-//NISO//NCIP DTD Version 1//EN" "http://www.niso.org/ncip/v1_0/imp1/dtd/ncip_v1_0.dtd">
+    <NCIPMessage version="http://www.niso.org/ncip/v1_0/imp1/dtd/ncip_v1_0.dtd">
+      <CheckInItemResponse>
+        <ResponseHeader>
+          <FromAgencyId>
+            <UniqueAgencyId>
+              <Scheme>http://www.relais-intl.com/ncip/schemes/agency.scm</Scheme>
+              <Value>TNS</Value>
+            </UniqueAgencyId>
+          </FromAgencyId>
+          <ToAgencyId>
+            <UniqueAgencyId>
+              <Scheme>http://www.relais-intl.com/ncip/schemes/agency.scm</Scheme>
+              <Value>RSH</Value>
+            </UniqueAgencyId>
+          </ToAgencyId>
+        </ResponseHeader>
+        <UniqueItemId>
+          <UniqueAgencyId>
+            <Scheme>NCIP Unique Agency Id</Scheme>
+            <Value>TNS</Value>
+          </UniqueAgencyId>
+          <ItemIdentifierValue>TNS-11423128</ItemIdentifierValue>
+        </UniqueItemId>
+        <UniqueUserId>
+          <UniqueAgencyId>
+            <Scheme>NCIP Unique Agency Id</Scheme>
+            <Value>TNS</Value>
+          </UniqueAgencyId>
+          <UserIdentifierValue>TESTTEST1</UserIdentifierValue>
+        </UniqueUserId>
+        <RoutingInformation>
+          <RoutingInstructions>No special Instructions</RoutingInstructions>
+          <Destination>
+            <Location>
+              <LocationType>
+                <Scheme>NCIP Location Type Scheme</Scheme>
+                <Value>Permanent</Value>
+              </LocationType>
+              <LocationName>
+                <LocationNameInstance>
+                  <LocationNameLevel>1</LocationNameLevel>
+                  <LocationNameValue>University Center</LocationNameValue>
+                </LocationNameInstance>
+                <LocationNameInstance>
+                  <LocationNameLevel>2</LocationNameLevel>
+                  <LocationNameValue>Main Collection</LocationNameValue>
+                </LocationNameInstance>
+                <LocationNameInstance>
+                  <LocationNameLevel>3</LocationNameLevel>
+                  <LocationNameValue>$$hG1036$$i.M53 2015</LocationNameValue>
+                </LocationNameInstance>
+              </LocationName>
+            </Location>
+          </Destination>
+        </RoutingInformation>
+        <UserOptionalFields>
+          <VisibleUserId>
+            <UniqueAgencyId>
+              <Scheme>NCIP Unique Agency Id</Scheme>
+              <Value>TNS</Value>
+            </UniqueAgencyId>
+            <VisibleUserIdentifierType>
+              <Scheme>NCIP Visible User Identifier Type Scheme</Scheme>
+              <Value>Institution Id Number</Value>
+            </VisibleUserIdentifierType>
+            <VisibleUserIdentifier>TESTTEST1</VisibleUserIdentifier>
+          </VisibleUserId>
+        </UserOptionalFields>
+      </CheckInItemResponse>
+    </NCIPMessage>
