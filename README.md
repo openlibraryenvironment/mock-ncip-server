@@ -20,7 +20,7 @@ Run the container (example)
 docker run -d -p 8080:8080 mock-ncip-server
 ```
 
-## Endpoints
+## NCIP 2 Endpoints
 
 #### All NCIP requests should use the endpoint (POST): http://localhost:8080/ncip  (you can adjust the port in the build file)
 
@@ -58,6 +58,18 @@ http://localhost:8080/api/loans/patron/{patronBarcode}
 http://localhost:8080/api/loans/item/{itemBarcode}
 <br>
 http://localhost:8080/api/loans/open
+
+## NCIP 1 Endpoints
+The NCIP1 responses are hard-coded (because the XC NCIP Toolkit does not support NCIP1).  The endpoints will not validate your input (or call the databases).  It simply returns canned responses:
+
+/ncipone/lookupUser
+/ncipone/lookupUserError
+/ncipone/acceptitem
+/ncipone/acceptitemError
+/ncipone/checkoutItem
+/ncipone/checkoutItemError
+/ncipone/checkinItem
+/ncipone/checkinItemError
 
 When appRun is called a jetty server is started and a sqlite database is created and test data is inserted:
 ```sql
