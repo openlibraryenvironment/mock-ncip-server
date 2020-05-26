@@ -21,14 +21,14 @@
             <Scheme>NCIP Unique Agency Id</Scheme>
             <Value>TNS</Value>
           </UniqueAgencyId>
-          <ItemIdentifierValue>31207052000951</ItemIdentifierValue>
+          <ItemIdentifierValue>55507052000951</ItemIdentifierValue>
         </UniqueItemId>
         <UniqueUserId>
           <UniqueAgencyId>
             <Scheme>NCIP Unique Agency Id</Scheme>
             <Value>TNS</Value>
           </UniqueAgencyId>
-          <UserIdentifierValue>TNSEZMVS1</UserIdentifierValue>
+          <UserIdentifierValue>TESTTEST</UserIdentifierValue>
         </UniqueUserId>
         <DateDue>2020-06-29T21:00:00Z</DateDue>
         <UserOptionalFields>
@@ -41,7 +41,7 @@
               <Scheme>NCIP Visible User Identifier Type Scheme</Scheme>
               <Value>Institution Id Number</Value>
             </VisibleUserIdentifierType>
-            <VisibleUserIdentifier>TNSEZMVS1</VisibleUserIdentifier>
+            <VisibleUserIdentifier>TESTTEST</VisibleUserIdentifier>
           </VisibleUserId>
         </UserOptionalFields>
       </CheckOutItemResponse>

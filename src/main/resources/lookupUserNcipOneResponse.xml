@@ -40,7 +40,7 @@
               <UnstructuredPersonalUserName>Doe, Jane Marie</UnstructuredPersonalUserName>
             </PersonalNameInformation>
           </NameInformation>
-          <UserAddressInformation>
+         <UserAddressInformation>
             <UserAddressRoleType>
               <Scheme>NCIP User Address Role Type Scheme</Scheme>
               <Value>Home</Value>
@@ -73,7 +73,7 @@
                 <Scheme>IANA URI Scheme</Scheme>
                 <Value>mailto</Value>
               </ElectronicAddressType>
-              <ElectronicAddressData>mis306@lehigh.edu</ElectronicAddressData>
+              <ElectronicAddressData>nota@realladdress.edu</ElectronicAddressData>
             </ElectronicAddress>
           </UserAddressInformation>
           <UserPrivilege>
@@ -108,7 +108,7 @@
             <UserPrivilegeStatus>
               <UserPrivilegeStatusType>
                 <Scheme>NCIP User Privilege Status Type Scheme</Scheme>
-                <Value>New School University Center</Value>
+                <Value>School University Center</Value>
               </UserPrivilegeStatusType>
             </UserPrivilegeStatus>
           </UserPrivilege>
@@ -126,7 +126,7 @@
             <UserPrivilegeStatus>
               <UserPrivilegeStatusType>
                 <Scheme>NCIP User Privilege Status Type Scheme</Scheme>
-                <Value>New School Undergraduate Student</Value>
+                <Value>School Undergraduate Student</Value>
               </UserPrivilegeStatusType>
             </UserPrivilegeStatus>
           </UserPrivilege>

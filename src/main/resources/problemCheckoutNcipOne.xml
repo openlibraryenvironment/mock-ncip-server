@@ -26,7 +26,7 @@
               <ElementName>UniqueItemId</ElementName>
               <ProcessingErrorElement>
                 <ElementName>ItemIdentifierValue</ElementName>
-                <ProcessingErrorValue>DKN-11429448</ProcessingErrorValue>
+                <ProcessingErrorValue>TST-11429448</ProcessingErrorValue>
               </ProcessingErrorElement>
             </ProcessingErrorElement>
           </ProcessingError>
